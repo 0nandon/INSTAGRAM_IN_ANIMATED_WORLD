@@ -13,7 +13,7 @@
 
 ### 아래 파일의 인자들을 자신의 컴퓨터에 바꿔주세요.
 
-/nerf/crawl/config.py
+/nerf/crawl/config.py에서 'nerf/crawl/chromedriver'의 절대 경로를 복사하여 아래 코드의 `CHROME_DRIVER`에 넣어주세요.
 ```python
 ...
 
@@ -23,7 +23,6 @@ PROFILE_POST_IMG_CLASS_TAG = 'eLAPa.vF75o'
 PROFILE_SINGLE_POST_IMG_CLASS = 'eLAPa.kPFhm'
 PROFILE_NEXT_PIC = 'coreSpriteRightChevron'
 
-CHROME_DRIVER = r"/Users/onandon/Downloads/nerf/nerf/crawl/chromedriver"
+CHROME_DRIVER = r"/Users/onandon/Downloads/nerf/nerf/crawl/chromedriver" # 여기에 자신의 컴퓨터에 맞는 경로를 넣어주기!
 ```
 
-'nerf/crawl/chromedriver'의 절대 경로를 복사하여 위 코드의 `CHROME_DRIVER`에 넣어주세요.
