@@ -50,3 +50,5 @@ def download_images(ID):
     driver.quit()
     return None
 ```
+## Run the Django!!
+`nerf/nerf/views.py`에서 `download_images`으
