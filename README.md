@@ -25,7 +25,8 @@ PROFILE_NEXT_PIC = 'coreSpriteRightChevron'
 
 CHROME_DRIVER = r"/Users/onandon/Downloads/nerf/nerf/crawl/chromedriver" # 여기에 자신의 컴퓨터에 맞는 경로를 넣어주기!
 ```
-<br>
+
+
 `/nerf/crawl/crawl_profile.py`에서 `'nerf/static/imgs'` 폴더의 절대 경로를 복사하여 open()함수에 넣어주기. 주석 참고!
 ```python
 ...
