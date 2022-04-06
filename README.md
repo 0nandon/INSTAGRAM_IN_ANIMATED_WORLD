@@ -13,7 +13,7 @@
 
 ### 아래 파일의 인자들을 자신의 컴퓨터에 바꿔주세요.
 
-/nerf/crawl/config.py에서 'nerf/crawl/chromedriver'의 절대 경로를 복사하여 아래 코드의 `CHROME_DRIVER`에 넣어주세요.
+`/nerf/crawl/config.py`에서 `'nerf/crawl/chromedriver'`의 절대 경로를 복사하여 아래 코드의 `CHROME_DRIVER`에 넣어주세요.
 ```python
 ...
 
