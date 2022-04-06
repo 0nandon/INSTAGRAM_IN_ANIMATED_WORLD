@@ -26,3 +26,26 @@ PROFILE_NEXT_PIC = 'coreSpriteRightChevron'
 CHROME_DRIVER = r"/Users/onandon/Downloads/nerf/nerf/crawl/chromedriver" # 여기에 자신의 컴퓨터에 맞는 경로를 넣어주기!
 ```
 
+`/nerf/crawl/crawl_profile.py`에서 `'nerf/static/imgs'` 폴더의 절대 경로를 복사하여 open()함수에 넣어주기. 주석 참고!
+```python
+...
+
+def download_images(ID):
+    driver = login(DEFAULT_ID, DEFAULT_PW, BASE_URL)
+    driver.get(BASE_URL + '/' + ID + '/')
+    
+    html = driver.page_source
+    imgs = bs4.BeautifulSoup(str(html)).select(IMG_CLASS)
+    
+    for index, img in tqdm(enumerate(imgs)):
+        src = img['src'].replace('amp;', '')
+        context = ssl._create_unverified_context()
+        download = urllib.request.urlopen(src, context=context).read()
+        
+        # 아래 open 함수에 '/Users/onandon/Downloads/nerf/nerf/static/imgs/'부분에 자신의 컴퓨터에 맞는 경로 넣어주기
+        with open('/Users/onandon/Downloads/nerf/nerf/static/imgs/' + ID + str(index) + '.jpg', 'wb') as f:
+            f.write(download)
+        
+    driver.quit()
+    return None
+```
